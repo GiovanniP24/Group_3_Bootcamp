@@ -1,0 +1,236 @@
+/*
+Style Name: CSS GRID Review 
+Description: Class File
+Author: Your Name 
+Version: 1.0
+Tags: GRID, Build, Be Awesome
+*/
+
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+/* -------------
+  Fonts
+-------------- */
+
+
+/* ------------ */
+
+/* -------------
+  Plugins
+-------------*/
+
+/* -------------
+  Reset
+-------------*/
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+}
+
+h1, h2, h3, h4, p {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+input, textarea {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+/* ___________________________________________
+
+       CSS Guide
+___________________________________________ */
+
+/* 01. General Styles                        
+   02. CSS Grid                          
+/* _____________________________________
+
+   01. General Styles
+   _____________________________________ */
+
+   .hidden {
+       display: none;
+   }
+
+   .box-model {
+	   margin: 1rem;
+	   padding: 1rem;
+	   background: #000;
+   }
+
+   /*------- Floats --------*/
+
+   .f-left {
+	   float: left;
+   }
+
+   .f-right {
+	   float: right;
+   }
+
+   /*------- End Floats --------*/
+   /*------- Font Awesome -------*/
+
+   /*------- End Font Awesome -------*/
+
+   /*------- Mobile Padding ---------*/
+
+   .mobile-padding {
+	   padding: 0 1em;
+   }
+
+   /*------- End Mobile Padding ---------*/
+
+   @supports (grid-area: auto) {
+
+	/*------------ Start Mobile ------------*/
+
+	.site {
+		max-width: 799px;
+	}
+
+	/*------------ Mobile Grid Items ------------*/
+
+	.head, .main > *, .foot {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.one-item {
+		display: grid;
+		grid-column: 1 / span 2;
+		grid-template-columns: 1fr;
+	}
+
+	.two-items {
+		display: grid;
+		grid-column: 1 / span 2;
+		grid-template-columns: repeat(2, 1fr);
+		justify-content: space-evenly;
+		row-gap: 2em;
+		column-gap: 2em;
+	}
+
+	.three-items {
+		display: grid;
+		grid-column: 1 / span 2;
+		grid-template-columns: repeat(3, 1fr);
+		justify-content: space-evenly;
+		row-gap: 2em;
+		column-gap: 2em;
+	}
+
+	.contact-override {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-column: 1 / span 2;
+		background: #f4f4f4;
+		border-bottom: 1px solid #ccc;
+	}
+
+	.custom-override {
+		display: grid;
+		grid-column: 1 / span 2;
+		grid-template-columns: 1fr;
+	}
+
+	.logo {
+		grid-column: 1 / span 1;
+	}
+
+	.nav {
+		grid-column: 2 / span 1;
+	}
+
+   @media screen and (min-width: 800px) {
+
+		.site {
+			max-width: none;
+		}
+
+		/*------------ Grid Items ------------*/
+
+		.head, .main > *, .foot {
+			display: grid;
+			grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
+		}
+
+		.one-item {
+			display: grid;
+			grid-column: 2 / span 2;
+			grid-template-columns: 1fr;
+		}
+
+		.two-items {
+			display: grid;
+			grid-column: 2 / span 2;
+			grid-template-columns: repeat(2, 1fr);
+			justify-content: space-evenly;
+			row-gap: 2em;
+			column-gap: 2em;
+		}
+
+		.three-items {
+			display: grid;
+			grid-column: 2 / span 2;
+			grid-template-columns: repeat(3, 1fr);
+			justify-content: space-evenly;
+			row-gap: 2em;
+			column-gap: 2em;
+		}
+
+		.contact-override {
+			display: grid;
+			grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
+			grid-column: 1 / span 4;
+			background: #f4f4f4;
+			border-bottom: 1px solid #ccc;
+		}
+
+		/*------------  End Grid Items ------------*/
+
+		.nav {
+			grid-column: 2 / span 3;
+		}
+	}
+   }
