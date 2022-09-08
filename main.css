@@ -1,0 +1,159 @@
+/*
+Style Name: Bootcamp 2022
+Description: Bootcamp assignment
+Author: Giovanni Perruzzi 
+Version: 1.0
+Tags: Grid, Flexbox
+*/
+
+/* General Styles */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.hidden {
+	display: none;
+}
+
+/* Grid items start */
+
+header,
+main,
+footer {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: auto;
+}
+
+/* Grid items end */
+
+/* Header starts */
+
+#header {
+	display: flex;
+	grid-column: 1 / span 5;
+	height: 100px;
+}
+
+.logo {
+	background-color: grey;
+	height: 60px;
+	width: 120px;
+	margin: 20px 200px;
+}
+
+.main-navigation {
+	display: flex;
+}
+
+ul {
+	display: flex;
+	margin-left: 600px;
+}
+
+li {
+	font-size: large;
+	margin: 40px 65px;
+}
+
+button {
+	background-color: transparent;
+	width: 150px;
+	margin: 25px 50px;
+}
+
+/* Header Ends */
+
+/* Main Starts */
+
+#main {
+	display: flex;
+	grid-column: 1 / span 5;
+	height: 500px;
+}
+
+.address-and-headline {
+	display: flex;
+	flex-direction: column;
+}
+
+.agency-location {
+	font-size: 20px;
+	margin-top: 80px;
+	margin-left: 200px;
+}
+
+.agency-headline {
+	font-size: 30px;
+	width: 350px;
+	margin-top: 5px;
+	margin-left: 200px;
+}
+
+.hero-image-and-text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.hero-text {
+	font-size: 30px;
+	width: 600px;
+	text-align: center;
+	margin-left: 150px;
+	margin-top: 5px;
+}
+.hero-image {
+	margin-left: 140px;
+}
+
+a {
+	text-decoration: none;
+	margin-left: 145px;
+	margin-top: 25px;
+}
+
+#services {
+	display: flex;
+	grid-column: 1 / span 5;
+	height: 500px;
+}
+
+.our-services {
+	display: flex;
+	flex-direction: column;
+}
+
+.what-we-do {
+	font-size: 20px;
+	margin-left: 200px;
+	margin-top: 50px;
+}
+
+h3.our-services {
+	font-size: 30px;
+	margin-left: 200px;
+	margin-top: 5px;
+}
+
+.our-services-images {
+	display: flex;
+	justify-content: space-between;
+}
+
+.testimonial-headings {
+	display: flex;
+	align-items: center;
+}
+
+.how-we-did {
+	font-size: 20px;
+}
+
+.testimonial-headings {
+}
+/* Main Ends */
