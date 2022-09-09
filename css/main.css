@@ -58,7 +58,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-size: 16px;
-	font-family: "Quicksand", sans-serif;
+	font-family: 'Quicksand', sans-serif;
 }
 
 h1,
@@ -118,7 +118,11 @@ ___________________________________________ */
 /*------- Start Margin --------*/
 .margin-top-sm {
 	margin-top: 50px;
-}
+   }
+
+   .margin-top-md {
+	  margin-top: 100px;
+   }
 
 /*------- End Margin --------*/
 
@@ -198,34 +202,95 @@ ___________________________________________ */
 		display: none;
 	}
 
+	/*------------ Mobile Footer ------------*/
+
+	footer {
+		background-color: #032b44;
+		color: white;
+		padding-bottom: 5em;
+	}
+
+	.footer-cta {
+		text-align: center;
+	}
+
+	.footer-cta h3 {
+		font-size: 2em;
+	}
+	
+	.button-dark {
+		color: white;
+		border: 1px solid white;
+		width: 10em;
+		padding: 1em 0;
+		margin: 2em auto 5em;
+	}
+
+	.button-dark:hover {
+		background-color: white;
+		color: black;
+	}
+
+
 	/*------------ Mobile Home ------------*/
 
 	.address-and-headline p {
 		font-size: 2em;
 		width: 70vw;
+		font-weight: 600;
+		margin-top: 1em;
 	}
 
 	.brand-video {
 		background: #000;
-		height: 30vh;
 		grid-column: 1 / span 4;
-	}
 
+	.brand-video video {
+		width: 100%;
+	}
+  
 	.team-description {
-		padding: 7em 7em;
+		padding: 3em;
 		text-align: center;
-		background: #032b4476;
+		background: #04d89c1c;
 		color: #000;
 		height: auto;
+		z-index: -1;
 	}
+
+	.team-description p {
+		margin-bottom: 1em;
+	}
+
+	.team-description a {
+		color: black;
+		text-decoration: underline;
+		z-index: +1;
+	}
+
+	
 
 	.our-services-text h3 {
 		font-size: 2em;
 	}
 
 	.services-block {
-		height: 120px;
-		background-color: grey;
+		grid-template-columns: 1fr;
+		font-size: 2em;	
+	}
+
+	.block-hover:hover{
+		background-color: #04d89c1c;
+	}
+
+	.services-block h4 {
+		padding: 1em 20vw;
+	}
+
+	.services-block img {
+		width: 30%;
+		filter: grayscale(1);
+		padding: 2em 30vw;
 	}
 
 	.testimonial-block img {
@@ -375,7 +440,14 @@ ___________________________________________ */
 		.team-description p {
 			font-size: 1.5em;
 		}
-
+    
+		.services-block h4 {
+			padding: 1em 1em ;
+		}
+	
+		.services-block img {
+			padding: 1em 3em ;
+		}
 		.services-grid {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
@@ -388,7 +460,7 @@ ___________________________________________ */
 			grid-column: 1 / span 2;
 			justify-content: start;
 			margin-left: 2.5em;
-		}
+    }
 
 		.contact-us-headline {
 			width: 21em;
@@ -415,6 +487,13 @@ ___________________________________________ */
 			grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
 		}
 
+	/*------------ Desktop Nav ------------*/
+
+	nav {
+		display: grid;
+		margin-top: 2em;
+	}
+=======
 		nav {
 			display: grid;
 			margin-top: 2em;
@@ -426,6 +505,47 @@ ___________________________________________ */
 			font-size: 1.5em;
 		}
 
+	nav ul li a{
+		color: #000;
+	}
+
+	.button {
+		padding: 0.5em 1em;
+		border: 1px solid black;
+	}
+
+	.button:hover {
+		color: white;
+		border: none;
+		background-color: #04d89d;
+	}
+
+	/*------------ Mobile Footer ------------*/
+
+	.footer-cta {
+		text-align:left;
+	}
+
+	.footer-cta h3 {
+		font-size: 3em;
+		font-weight: 600;
+	}
+	
+	.button-dark {
+		width: 13em;
+		padding: 1em 0;
+		margin: 2em 0 5em;
+		text-align:center;
+	}
+
+	.address-info p{
+		font-size: 1.2em;
+	}
+
+	.address-and-headline h3 {
+		font-size: 1.5em;
+	}
+  
 		.address-and-headline h3 {
 			font-size: 1.5em;
 		}
@@ -445,6 +565,25 @@ ___________________________________________ */
 		}
 	}
 
+	.team-description {
+		margin-top: -5em;
+	}
+
+	.team-description p {
+		font-size: 2em;
+		margin-bottom: 1em;
+		max-width: 900px;
+		justify-self: center;
+		margin-top: 5em;
+	}
+
+	.services-block h4 {
+		padding: 2em 3em 1em;
+	}
+
+	.services-block img {
+		padding: 2em 5em 1em;
+    
 	/* ------------ Portfolio page starts ------------*/
 
 	.our-work-and-description {

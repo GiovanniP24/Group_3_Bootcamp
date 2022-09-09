@@ -5,22 +5,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="css/reset.css" type="text/css" rel="stylesheet" />
     <link href="css/main.css" type="text/css" rel="stylesheet" />
-    <title>Startup Agency</title>
+    <title>HelpUp Studio</title>
 </head>
 
 <body>
     <header class="head" id="header">
         <h1 class="hidden">Header</h1>
         <div class="two-items nav-bar">
-            <img src="images/logoSVG.svg" alt="Logo">
+            <a href="index.html"><img src="images/logoSVG.svg" alt="Logo"></a>
             <nav class="f-right">
                 <ul>
-                    <li>Home</li>
-                    <li>Team</li>
-                    <li>Portfolio</li>
-                    <li><button type="button">Contact</button></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a class="button" href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </section>
@@ -32,34 +34,48 @@
         <section id="main">
             <h1 class="hidden">Home Page</h1>
             <h2 class="hidden">Hero Section</h2>
-            <div class="address-and-headline one-item margin-top-sm">
-                <h3 class="agency-location">Design agency in London, Ontario</h3>
+            <div class="address-and-headline one-item margin-top-md">
+                <h3>Design agency in London, Ontario</h3>
                 <p class="agency-headline">Creating long-lasting brands, valuable digital products, and memorable brands.</p>
             </div>
             <div class="brand-video margin-top-sm one-item">
-                <h2 class="">Brand Vdieo</h2>
+                <h2 class="hidden">Brand Vdieo</h2>
+                <video src="videos/Brainhole_Logo_Anim.mp4" controls></video>
             </div>
         </section>
 
         <section>
             <div class="team-description custom-override">
                 <h2 class="hidden">Team Description</h2>
-                <p class="hero-text">We are a very good agency that can do a lot a thing really well. We can make
-                    things that make you a lot of money and look really nice and nice to use.</p>
-                <a href="#ourteam">Our Team</a>
+                <p>We are a very good agency that can do a lot a thing really well. We can make things that make you a lot of money and look really nice and nice to use.</p>
+                <a href="team.html">Our Team</a>
             </div>
         </section>
 
         <section id="services">
             <h2 class="hidden">Our Services</h2>
-            <div class="our-services-text one-item margin-top-sm">
+            <div class="our-services-text one-item margin-top-md">
                 <span>What we do</span>
                 <h3>Our Services</h3>
-                <div class="services-grid margin-top-sm">
-                    <div class="services-block"><img src="images/" alt="Service #1" class="service-1"></div>
-                    <div class="services-block"><img src="images/" alt="Service #2" class="service-2"></div>
-                    <div class="services-block"><img src="images/" alt="Service #3" class="service-3"></div>
-                    <div class="services-block"><img src="images/" alt="Service #4" class="service-4"></div>
+            </div> 
+            <div class="two-items services-block margin-top-sm">
+                <div class="block-hover">
+                    <img src="images/web-dev.svg" alt="web dev">
+                    <h4>Website Development</h4>
+                </div>
+                <div class="block-hover">
+                    <img src="images/branding.svg" alt="branding">
+                    <h4>Branding/Visual Identity</h4>
+
+                </div>
+                <div class="block-hover">
+                    <img src="images/app.svg" alt="app">
+                    <h4>Web/Mobile App</h4>
+                </div>
+                <div class="block-hover">
+                    <img src="images/ecom.svg" alt="ecom">
+                    <h4>Ecommerce Marketing</h4>
+
                 </div>
             </div>
         </section>
@@ -81,18 +97,19 @@
         </section>
     </main>
     <footer>
-        <section id="footer">
-            <h1 class="hidden">Footer</h1>
-            <div class="contact-us">
-                <h2 class="have-a-project-in-mind">Have a project in mind?</h2>
-                <button type="button">Contact</button>
+        <section class="foot margin-top-md">
+            <h2 class="hidden">Footer</h2>
+            <div class="one-item footer-cta margin-top-sm">
+                <h3>Have a project in mind?</h3>
+                <a class="button-dark" href="contact.html">Contact</a>
             </div>
-            <div class="address-info">
-                <h3 class="address">1st Success Ave, London, Ontario</h3>
-            </div>
-            <div class="number-and-email">
-                <h3 class="number">+1 800 500 3030</h3>
-                <h3 class="email">hello@xxx.com</h3>
+            <div class="address-info two-items">
+                <h3 class="hidden">Address and Phone of Studio</h3>
+                <div>
+                    <p>1st Success Ave, London, Ontario</p>
+                    <p class="margin-top-sm">+1 800 500 3030</p>
+                    <p>hello@xxx.com</p>
+                </div>
             </div>
         </section>
     </footer>
