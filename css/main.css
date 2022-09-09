@@ -1,159 +1,366 @@
 /*
-Style Name: Bootcamp 2022
-Description: Bootcamp assignment
-Author: Giovanni Perruzzi 
+Style Name: CSS GRID Review 
+Description: Class File
+Author: Your Name 
 Version: 1.0
-Tags: Grid, Flexbox
+Tags: GRID, Build, Be Awesome
 */
 
-/* General Styles */
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
 
-* {
-	box-sizing: border-box;
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+/* -------------
+  Fonts
+-------------- */
+
+
+/* ------------ */
+
+/* -------------
+  Plugins
+-------------*/
+
+/* -------------
+  Reset
+-------------*/
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family: sans-serif;
+}
+
+h1, h2, h3, h4, p {
 	margin: 0;
 	padding: 0;
 }
 
-.hidden {
-	display: none;
-}
-
-/* Grid items start */
-
-header,
-main,
-footer {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: auto;
-}
-
-/* Grid items end */
-
-/* Header starts */
-
-#header {
-	display: flex;
-	grid-column: 1 / span 5;
-	height: 100px;
-}
-
-.logo {
-	background-color: grey;
-	height: 60px;
-	width: 120px;
-	margin: 20px 200px;
-}
-
-.main-navigation {
-	display: flex;
-}
-
-ul {
-	display: flex;
-	margin-left: 600px;
-}
-
-li {
-	font-size: large;
-	margin: 40px 65px;
-}
-
-button {
-	background-color: transparent;
-	width: 150px;
-	margin: 25px 50px;
-}
-
-/* Header Ends */
-
-/* Main Starts */
-
-#main {
-	display: flex;
-	grid-column: 1 / span 5;
-	height: 500px;
-}
-
-.address-and-headline {
-	display: flex;
-	flex-direction: column;
-}
-
-.agency-location {
-	font-size: 20px;
-	margin-top: 80px;
-	margin-left: 200px;
-}
-
-.agency-headline {
-	font-size: 30px;
-	width: 350px;
-	margin-top: 5px;
-	margin-left: 200px;
-}
-
-.hero-image-and-text {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-end;
-}
-
-.hero-text {
-	font-size: 30px;
-	width: 600px;
-	text-align: center;
-	margin-left: 150px;
-	margin-top: 5px;
-}
-.hero-image {
-	margin-left: 140px;
-}
-
 a {
 	text-decoration: none;
-	margin-left: 145px;
-	margin-top: 25px;
 }
 
-#services {
-	display: flex;
-	grid-column: 1 / span 5;
-	height: 500px;
+input, textarea {
+	display: block;
+	margin: 0;
+	padding: 0;
 }
 
-.our-services {
-	display: flex;
-	flex-direction: column;
-}
+/* ___________________________________________
 
-.what-we-do {
-	font-size: 20px;
-	margin-left: 200px;
+       CSS Guide
+___________________________________________ */
+
+/* 01. General Styles                        
+   02. CSS Grid                          
+/* _____________________________________
+
+   01. General Styles
+   _____________________________________ */
+
+   .hidden {
+       display: none;
+   }
+
+   .box-model {
+	   margin: 1rem;
+	   padding: 1rem;
+	   background: #000;
+   }
+
+   /*------- Floats --------*/
+
+   .f-left {
+	   float: left;
+   }
+
+   .f-right {
+	   float: right;
+   }
+
+   /*------- End Floats --------*/
+
+   /*------- Start Margin --------*/
+   .margin-top-sm {
 	margin-top: 50px;
-}
+   }
 
-h3.our-services {
-	font-size: 30px;
-	margin-left: 200px;
-	margin-top: 5px;
-}
+   /*------- End Margin --------*/
 
-.our-services-images {
-	display: flex;
-	justify-content: space-between;
-}
 
-.testimonial-headings {
-	display: flex;
-	align-items: center;
-}
 
-.how-we-did {
-	font-size: 20px;
-}
 
-.testimonial-headings {
+
+
+   /*------- Mobile Padding ---------*/
+
+   .mobile-padding {
+	   padding: 0 1em;
+   }
+
+   /*------- End Mobile Padding ---------*/
+
+   @supports (grid-area: auto) {
+
+	/*------------ Start Mobile ------------*/
+
+	.site {
+		max-width: 799px;
+		min-width: 400px;
+	}
+
+	/*------------ Mobile Grid Items ------------*/
+
+	.head, .main > *, .foot {
+		display: grid;
+		grid-template-columns: 40px 1fr 1fr 40px;
+	}
+
+	.one-item {
+		display: grid;
+		grid-column: 2 / span 2;
+		grid-template-columns: 1fr;
+	}
+
+	.two-items {
+		display: grid;
+		grid-column: 2/ span 2;
+		grid-template-columns: repeat(2, 1fr);
+		justify-content: space-evenly;
+		row-gap: 2em;
+		column-gap: 2em;
+	}
+
+	.three-items {
+		display: grid;
+		grid-column: 2 / span 2;
+		grid-template-columns: repeat(3, 1fr);
+		justify-content: space-evenly;
+		row-gap: 2em;
+		column-gap: 2em;
+	}
+
+	.custom-override {
+		display: grid;
+		grid-column: 1 / span 4;
+		grid-template-columns: 1fr;
+	}
+
+	.logo {
+		grid-column: 1 / span 1;
+	}
+
+	.nav {
+		grid-column: 2 / span 1;
+	}
+
+	/*------------ Mobile Header ------------*/
+	.nav-bar {
+		padding-top: 50px;
+	}
+
+	.nav-bar img{
+		width: 150px;
+
+	}
+	
+	nav {
+		display: none;
+	}
+
+	/*------------ Mobile Home ------------*/
+
+	.address-and-headline p{
+		font-size: 2em;
+		width: 70vw;
+	}
+
+	.brand-video {
+		background: #000;
+		height: 30vh;
+		grid-column: 1 / span 4;
+
+	}
+	
+	.team-description {
+		padding: 7em 7em;
+		text-align: center;
+		background: #032b4476;
+		color: #000;
+		height: auto;
+	}
+
+	.our-services-text h3 {
+		font-size: 2em;
+	}
+
+	.services-block {
+		height: 120px;
+		background-color: grey;
+	}
+
+
+	.testimonial-block img{
+		width: 70vw;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*------------ End Mobile ------------*/
+	/*------------ Start Tablet ------------*/
+
+   @media screen and (min-width: 800px) {
+
+		.site {
+			max-width: 999px;
+		}
+
+		/*------------ Grid Items ------------*/
+
+		.head, .main > *, .foot {
+			display: grid;
+			grid-template-columns: 1fr repeat(2, minmax(auto, 20em)) 1fr;
+		}
+
+		.one-item {
+			display: grid;
+			grid-column: 2 / span 2;
+			grid-template-columns: 1fr;
+		}
+
+		.two-items {
+			display: grid;
+			grid-column: 2 / span 2;
+			grid-template-columns: repeat(2, 1fr);
+			justify-content: space-evenly;
+			row-gap: 2em;
+			column-gap: 2em;
+		}
+
+		.three-items {
+			display: grid;
+			grid-column: 2 / span 2;
+			grid-template-columns: repeat(3, 1fr);
+			justify-content: space-evenly;
+			row-gap: 2em;
+			column-gap: 2em;
+		}
+
+		.four-items {
+			display: grid;
+			grid-column: 2 / span 2;
+			grid-template-columns: repeat(4, 1fr);
+			justify-content: space-evenly;
+			row-gap: 2em;
+			column-gap: 2em;
+		}
+
+		/*------------  End Grid Items ------------*/
+
+		.nav {
+			grid-column: 2 / span 3;
+		}
+
+		/*------------ Tablet Home ------------*/
+		
+		.team-description p {
+			font-size: 1.5em;
+		}
+
+		.services-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+
+		}
+
+
+
+
+	}
+
+
+	@media screen and (min-width: 1000px) {
+	
+	/*------------ Desktop Home ------------*/
+
+	.head, .main > *, .foot {
+		display: grid;
+		grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
+	}
+
+	nav {
+		display: grid;
+		margin-top: 2em;
+	}
+
+	nav ul li {
+		display: inline;
+		margin-left: 1.5em;
+		font-size: 1.5em;
+	}
+
+	.address-and-headline h3 {
+		font-size: 1.5em;
+	}
+
+	.address-and-headline p {
+		font-size: 2.5em;
+		width: 35vw;
+	}
+
+
+	.team-description {
+		margin-top: -10em;
+		padding: 18em 20em 10em 20em;
+	}
+
+	.team-description p {
+		font-size: 2em;
+	}
+
+
+	}
+
+
 }
-/* Main Ends */
