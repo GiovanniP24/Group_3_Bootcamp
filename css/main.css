@@ -236,8 +236,7 @@ ___________________________________________ */
 
 	/*------------ Mobile Contact -----------*/
 	.f-right {
-		display: grid;
-		grid-column: 3 / span 1;
+		display: none;
 	}
 
 	div.contact-us {
@@ -282,6 +281,39 @@ ___________________________________________ */
 	/* ------------ Mobile Contact End ---------- */
 
 	/* ------------ Mobile Portfolio Start ---------- */
+
+	.our-work-and-description {
+		margin-left: 2.5em;
+		margin-top: 4em;
+		margin-bottom: 6em;
+	}
+
+	.our-work {
+		margin-bottom: 1.5em;
+	}
+
+	.description {
+		width: 15em;
+	}
+
+	.piece-1,
+	.piece-2,
+	.piece-3 {
+		margin-left: 2.5em;
+		margin-bottom: 4em;
+	}
+
+	.project-1,
+	.project-2,
+	.project-3 {
+		margin-bottom: 1em;
+	}
+
+	.description,
+	.description-2,
+	.description-3 {
+		margin-bottom: 1em;
+	}
 
 	/*------------ Start Tablet ------------*/
 
