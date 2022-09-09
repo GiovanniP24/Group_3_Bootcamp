@@ -11,59 +11,72 @@
 </head>
 
 <body>
-    <header>
-        <section id="header">
-            <h1 class="hidden">Header</h1>
-            <div class="logo">
-                <img src="images/" alt="Logo">
-            </div>
-            <nav class="main-navigation">
+    <header class="head" id="header">
+        <h1 class="hidden">Header</h1>
+        <div class="two-items nav-bar">
+            <img src="images/logoSVG.svg" alt="Logo">
+            <nav class="f-right">
                 <ul>
                     <li>Home</li>
                     <li>Team</li>
                     <li>Portfolio</li>
+                    <li><button type="button">Contact</button></li>
                 </ul>
-                <button type="button">Contact</button>
             </nav>
         </section>
     </header>
-    <main>
+
+
+
+    <main class="main">
         <section id="main">
-            <h1 class="hidden">Main</h1>
-            <div class="address-and-headline">
-                <h2 class="agency-location">Design agency in London, Ontario</h2>
-                <h3 class="agency-headline">Creating long-lasting brands, valuable digital products, and memorable
-                    brands.</h3>
+            <h1 class="hidden">Home Page</h1>
+            <h2 class="hidden">Hero Section</h2>
+            <div class="address-and-headline one-item margin-top-sm">
+                <h3 class="agency-location">Design agency in London, Ontario</h3>
+                <p class="agency-headline">Creating long-lasting brands, valuable digital products, and memorable brands.</p>
             </div>
-            <div class="hero-image-and-text">
-                <img src="images/" alt="Hero image" class="hero-image">
-                <h2 class="hero-text">We are a very good agency that can do a lot a thing really well. We can make
-                    things that make you a lot of money and look really nice and nice to use.</h2>
+            <div class="brand-video margin-top-sm one-item">
+                <h2 class="">Brand Vdieo</h2>
+            </div>
+        </section>
+
+        <section>
+            <div class="team-description custom-override">
+                <h2 class="hidden">Team Description</h2>
+                <p class="hero-text">We are a very good agency that can do a lot a thing really well. We can make
+                    things that make you a lot of money and look really nice and nice to use.</p>
                 <a href="#ourteam">Our Team</a>
             </div>
         </section>
+
         <section id="services">
-            <h1 class="hidden">Our Services</h1>
-            <div class="our-services">
-                <h2 class="what-we-do">What we do</h2>
-                <h3 class="our-services">Our Services</h3>
-                <div class="our-services-images">
-                    <img src="images/" alt="Service #1" class="service-1">
-                    <img src="images/" alt="Service #2" class="service-2">
-                    <img src="images/" alt="Service #3" class="service-3">
-                    <img src="images/" alt="Service #4" class="service-4">
+            <h2 class="hidden">Our Services</h2>
+            <div class="our-services-text one-item margin-top-sm">
+                <span>What we do</span>
+                <h3>Our Services</h3>
+                <div class="services-grid margin-top-sm">
+                    <div class="services-block"><img src="images/" alt="Service #1" class="service-1"></div>
+                    <div class="services-block"><img src="images/" alt="Service #2" class="service-2"></div>
+                    <div class="services-block"><img src="images/" alt="Service #3" class="service-3"></div>
+                    <div class="services-block"><img src="images/" alt="Service #4" class="service-4"></div>
                 </div>
             </div>
-            <div class="testimonial-headings">
-                <h2 class="how-we-did">How we did</h2>
-                <h3 class="testimonial">Testimonial</h3>
-            </div>
-            <div class="testimonial-image-and-description">
-                <img src="images/" alt="Testimonial image" class="testimonial-image">
-                <p class="description">" I would definitely recommend xxx, they are the best and they are so cheap,
-                    they
-                    made me a lot of money and now I am rich. "</p>
-                <aside> - A rich person</aside>
+        </section>
+
+        <section>
+            <div class="hidden">
+                <h2 class="testimonial">Testimonial</h2>
+                <div class="three-item">
+                    <span class="how-we-did">How we did</span>
+                </div>
+                <div class="testimonial-block">
+                    <img src="images/480x480.png" alt="Testimonial image">
+                    <p class="description">" I would definitely recommend xxx, they are the best and they are so cheap,
+                        they
+                        made me a lot of money and now I am rich. "</p>
+                    <aside> - A rich person</aside>
+                </div>
             </div>
         </section>
     </main>
