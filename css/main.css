@@ -44,7 +44,6 @@ Accessibility
   Fonts
 -------------- */
 
-
 /* ------------ */
 
 /* -------------
@@ -62,7 +61,11 @@ body {
 	font-family: sans-serif;
 }
 
-h1, h2, h3, h4, p {
+h1,
+h2,
+h3,
+h4,
+p {
 	margin: 0;
 	padding: 0;
 }
@@ -71,7 +74,8 @@ a {
 	text-decoration: none;
 }
 
-input, textarea {
+input,
+textarea {
 	display: block;
 	margin: 0;
 	padding: 0;
@@ -89,50 +93,44 @@ ___________________________________________ */
    01. General Styles
    _____________________________________ */
 
-   .hidden {
-       display: none;
-   }
+.hidden {
+	display: none;
+}
 
-   .box-model {
-	   margin: 1rem;
-	   padding: 1rem;
-	   background: #000;
-   }
+.box-model {
+	margin: 1rem;
+	padding: 1rem;
+	background: #000;
+}
 
-   /*------- Floats --------*/
+/*------- Floats --------*/
 
-   .f-left {
-	   float: left;
-   }
+.f-left {
+	float: left;
+}
 
-   .f-right {
-	   float: right;
-   }
+.f-right {
+	float: right;
+}
 
-   /*------- End Floats --------*/
+/*------- End Floats --------*/
 
-   /*------- Start Margin --------*/
-   .margin-top-sm {
+/*------- Start Margin --------*/
+.margin-top-sm {
 	margin-top: 50px;
-   }
+}
 
-   /*------- End Margin --------*/
+/*------- End Margin --------*/
 
+/*------- Mobile Padding ---------*/
 
+.mobile-padding {
+	padding: 0 1em;
+}
 
+/*------- End Mobile Padding ---------*/
 
-
-
-   /*------- Mobile Padding ---------*/
-
-   .mobile-padding {
-	   padding: 0 1em;
-   }
-
-   /*------- End Mobile Padding ---------*/
-
-   @supports (grid-area: auto) {
-
+@supports (grid-area: auto) {
 	/*------------ Start Mobile ------------*/
 
 	.site {
@@ -142,7 +140,9 @@ ___________________________________________ */
 
 	/*------------ Mobile Grid Items ------------*/
 
-	.head, .main > *, .foot {
+	.head,
+	.main > *,
+	.foot {
 		display: grid;
 		grid-template-columns: 40px 1fr 1fr 40px;
 	}
@@ -155,7 +155,7 @@ ___________________________________________ */
 
 	.two-items {
 		display: grid;
-		grid-column: 2/ span 2;
+		grid-column: 2 / span 2;
 		grid-template-columns: repeat(2, 1fr);
 		justify-content: space-evenly;
 		row-gap: 2em;
@@ -190,18 +190,17 @@ ___________________________________________ */
 		padding-top: 50px;
 	}
 
-	.nav-bar img{
+	.nav-bar img {
 		width: 150px;
-
 	}
-	
+
 	nav {
 		display: none;
 	}
 
 	/*------------ Mobile Home ------------*/
 
-	.address-and-headline p{
+	.address-and-headline p {
 		font-size: 2em;
 		width: 70vw;
 	}
@@ -210,9 +209,8 @@ ___________________________________________ */
 		background: #000;
 		height: 30vh;
 		grid-column: 1 / span 4;
-
 	}
-	
+
 	.team-description {
 		padding: 7em 7em;
 		text-align: center;
@@ -230,35 +228,23 @@ ___________________________________________ */
 		background-color: grey;
 	}
 
-
-	.testimonial-block img{
+	.testimonial-block img {
 		width: 70vw;
 	}
-
-
-
-
-
-
-
-
-
-
-
-
 
 	/*------------ End Mobile ------------*/
 	/*------------ Start Tablet ------------*/
 
-   @media screen and (min-width: 800px) {
-
+	@media screen and (min-width: 800px) {
 		.site {
 			max-width: 999px;
 		}
 
 		/*------------ Grid Items ------------*/
 
-		.head, .main > *, .foot {
+		.head,
+		.main > *,
+		.foot {
 			display: grid;
 			grid-template-columns: 1fr repeat(2, minmax(auto, 20em)) 1fr;
 		}
@@ -303,7 +289,7 @@ ___________________________________________ */
 		}
 
 		/*------------ Tablet Home ------------*/
-		
+
 		.team-description p {
 			font-size: 1.5em;
 		}
@@ -311,56 +297,74 @@ ___________________________________________ */
 		.services-grid {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
-
 		}
-
-
-
-
 	}
-
 
 	@media screen and (min-width: 1000px) {
-	
-	/*------------ Desktop Home ------------*/
+		/*------------ Desktop Home ------------*/
 
-	.head, .main > *, .foot {
+		.head,
+		.main > *,
+		.foot {
+			display: grid;
+			grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
+		}
+
+		nav {
+			display: grid;
+			margin-top: 2em;
+		}
+
+		nav ul li {
+			display: inline;
+			margin-left: 1.5em;
+			font-size: 1.5em;
+		}
+
+		.address-and-headline h3 {
+			font-size: 1.5em;
+		}
+
+		.address-and-headline p {
+			font-size: 2.5em;
+			width: 35vw;
+		}
+
+		.team-description {
+			margin-top: -10em;
+			padding: 18em 20em 10em 20em;
+		}
+
+		.team-description p {
+			font-size: 2em;
+		}
+	}
+
+	/* ------------ Portfolio page starts ------------*/
+
+	.our-work-and-description {
 		display: grid;
-		grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
+		grid-column: 1 / span 4;
 	}
 
-	nav {
+	#portfolio-peices {
 		display: grid;
-		margin-top: 2em;
+		grid-column: 1 / span 4;
 	}
 
-	nav ul li {
-		display: inline;
-		margin-left: 1.5em;
-		font-size: 1.5em;
+	#our-partners {
+		display: grid;
+		grid-column: 1 / span 4;
 	}
 
-	.address-and-headline h3 {
-		font-size: 1.5em;
+	/* ------ Contact page starts ------*/
+
+	#header {
+		display: grid;
+		grid-column: 2 / span 2;
+		grid-template-columns: repeat(2, 1fr);
+		justify-content: space-evenly;
+		row-gap: 2em;
+		column-gap: 2em;
 	}
-
-	.address-and-headline p {
-		font-size: 2.5em;
-		width: 35vw;
-	}
-
-
-	.team-description {
-		margin-top: -10em;
-		padding: 18em 20em 10em 20em;
-	}
-
-	.team-description p {
-		font-size: 2em;
-	}
-
-
-	}
-
-
 }
