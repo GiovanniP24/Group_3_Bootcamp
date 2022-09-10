@@ -345,6 +345,11 @@ ___________________________________________ */
 		height: 8em;
 	}
 
+	#button {
+		margin-left: 8.5em;
+		margin-top: 1em;
+	}
+
 	button {
 		margin-bottom: 7em;
 		margin-top: 1em;
@@ -523,6 +528,10 @@ ___________________________________________ */
 
 		.have-a-project-in-mind {
 			margin-left: 14em;
+		}
+
+		#button {
+			margin-left: 0;
 		}
 
 		button {
