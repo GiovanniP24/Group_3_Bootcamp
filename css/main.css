@@ -414,6 +414,13 @@ ___________________________________________ */
 		margin-top: 1em;
 	}
 
+	.contact-us-footer {
+		display: grid;
+		grid-column: 1 / span 2;
+		justify-content: center;
+		margin-left: -4em;
+	}
+
 	.have-a-project-in-mind {
 		font-size: 1.3em;
 	}
@@ -616,7 +623,7 @@ ___________________________________________ */
 		}
 
 		.have-a-project-in-mind {
-			margin-left: 9.6em;
+			margin-left: 4.6em;
 		}
 
 		#button {
@@ -671,6 +678,10 @@ ___________________________________________ */
 		.description-2,
 		.description-3 {
 			width: 18em;
+		}
+
+		button {
+			margin-left: 11.6em;
 		}
 		/* ---------- Tablet Portfolio Ends ----------- */
 	}
@@ -760,135 +771,196 @@ ___________________________________________ */
 		.team-description p {
 			font-size: 2em;
 		}
+
+		.team-description {
+			margin-top: -5em;
+		}
+
+		.team-description p {
+			font-size: 2em;
+			margin-bottom: 1em;
+			max-width: 900px;
+			justify-self: center;
+			margin-top: 5em;
+		}
+
+		.services-block h4 {
+			padding: 2em 3em 1em;
+		}
+
+		.services-block img {
+			padding: 2em 5em 1em;
+		}
+
+		.testimonial {
+			display: grid;
+		}
+
+		.test-slider {
+			display: grid;
+			grid-template-columns: 1fr 6fr 1fr;
+		}
+
+		.arrow {
+			height: 2em;
+			margin: auto auto;
+			stroke-width: 2em;
+		}
+
+		.slider-block {
+			display: inline;
+		}
+
+		.slider-block img {
+			width: 15em;
+			height: 15em;
+			border-radius: 20em;
+			object-fit: cover;
+		}
+
+		.slider-block p {
+			float: right;
+			width: 25em;
+			text-align: center;
+			margin-top: 5em;
+			margin-left: 3em;
+		}
+
+		/* -------- Desktop Home Ends --------- */
+
+		/* --------- Desktop Team ---------- */
+
+		.team-pics {
+			grid-template-columns: repeat(4, 1fr);
+		}
+
+		.team-card {
+			filter: grayscale(1);
+			opacity: 0.8;
+		}
+
+		.team-card:hover {
+			filter: none;
+			opacity: 1;
+			transition: all 0.8s ease;
+		}
+
+		.team-card img {
+			height: 30em;
+			object-fit: cover;
+		}
+
+		.team-card p,
+		.team-card h3,
+		.team-card h4 {
+			display: none;
+		}
+
+		.detail-text span {
+			font-size: 2em;
+		}
+
+		.detail-text p {
+			grid-column: 2 / span 2;
+			font-size: 1.5em;
+		}
+
+		.mobile-hide {
+			display: grid;
+			grid-column: 2 / span 2;
+			grid-template-columns: 1fr;
+		}
+
+		.hidden {
+			display: none;
+		}
+
+		/* --------- Desktop Team Ends --------- */
+
+		/* -------- Desktop Case -------- */
+
+		.case-photos {
+			width: 100%;
+			height: 30em;
+			object-fit: cover;
+			margin-top: 6em;
+		}
+
+		.case-block {
+			max-width: 40em;
+			margin: 0 auto;
+		}
+
+		.case-block p {
+			max-width: 35em;
+			margin: 1.2em auto 0;
+		}
+
+		/* -------- Desktop Case Ends --------- */
+
+		/* ------------ Portfolio page starts ------------*/
+
+		.our-work-and-description {
+			margin-left: 22em;
+		}
+
+		.description-headline {
+			margin-left: 15em;
+		}
+
+		.description-headline {
+			width: 30em;
+		}
+
+		#portfolio-peices {
+			margin-left: 27em;
+		}
+
+		.description,
+		.description-2,
+		.description-3 {
+			width: 23em;
+		}
+
+		.have-a-project-in-mind {
+			margin-left: 5px;
+		}
+
+		button {
+			margin-left: 5px;
+		}
+
+		/* ------ Contact page starts ------*/
+
+		div.contact-us {
+			margin-left: 29em;
+		}
+
+		.contact-us-headline {
+			width: 12em;
+		}
+
+		.contact-form {
+			margin-left: 29em;
+		}
+
+		#name,
+		#email {
+			width: 30em;
+		}
+
+		#button {
+			width: 10em;
+			height: 3.5em;
+		}
+
+		.contact-us-footer {
+			margin-left: -46.5em;
+		}
+
+		.address-info,
+		.number-and-email {
+			margin-left: 29.5em;
+		}
 	}
-
-	.team-description {
-		margin-top: -5em;
-	}
-
-	.team-description p {
-		font-size: 2em;
-		margin-bottom: 1em;
-		max-width: 900px;
-		justify-self: center;
-		margin-top: 5em;
-	}
-
-	.services-block h4 {
-		padding: 2em 3em 1em;
-	}
-
-	.services-block img {
-		padding: 2em 5em 1em;
-	}
-
-	.testimonial {
-		display: grid;
-	}
-
-	.test-slider {
-		display: grid;
-		grid-template-columns: 1fr 6fr 1fr;
-	}
-
-	.arrow {
-		height: 2em;
-		margin: auto auto;
-		stroke-width: 2em;
-	}
-
-	.slider-block {
-		display: inline;
-	}
-
-	.slider-block img {
-		width: 15em;
-		height: 15em;
-		border-radius: 20em;
-		object-fit: cover;
-	}
-
-	.slider-block p {
-		float: right;
-		width: 25em;
-		text-align: center;
-		margin-top: 5em;
-		margin-left: 3em;
-	}
-
-	/* -------- Desktop Home Ends --------- */
-
-	/* --------- Desktop Team ---------- */
-
-	.team-pics {
-		grid-template-columns: repeat(4, 1fr);
-	}
-
-	.team-card {
-		filter: grayscale(1);
-		opacity: 0.8;
-	}
-
-	.team-card:hover {
-		filter: none;
-		opacity: 1;
-		transition: all 0.8s ease;
-	}
-
-	.team-card img {
-		height: 30em;
-		object-fit: cover;
-	}
-
-	.team-card p,
-	.team-card h3,
-	.team-card h4 {
-		display: none;
-	}
-
-	.detail-text span {
-		font-size: 2em;
-	}
-
-	.detail-text p {
-		grid-column: 2 / span 2;
-		font-size: 1.5em;
-	}
-
-	.mobile-hide {
-		display: grid;
-		grid-column: 2 / span 2;
-		grid-template-columns: 1fr;
-	}
-
-	.hidden {
-		display: none;
-	}
-
-	/* --------- Desktop Team Ends --------- */
-
-	/* -------- Desktop Case -------- */
-
-	.case-photos {
-		width: 100%;
-		height: 30em;
-		object-fit: cover;
-		margin-top: 6em;
-	}
-
-	.case-block {
-		max-width: 40em;
-		margin: 0 auto;
-	}
-
-	.case-block p {
-		max-width: 35em;
-		margin: 1.2em auto 0;
-	}
-
-	/* -------- Desktop Case Ends --------- */
-
-	/* ------------ Portfolio page starts ------------*/
-
-	/* ------ Contact page starts ------*/
 }
