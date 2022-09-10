@@ -176,6 +176,15 @@ ___________________________________________ */
 		column-gap: 2em;
 	}
 
+	.four-items {
+		display: grid;
+		grid-column: 2 / span 2;
+		grid-template-columns: 1fr;
+		justify-content: space-evenly;
+		row-gap: 2em;
+		column-gap: 2em;
+	}
+
 	.custom-override {
 		display: grid;
 		grid-column: 1 / span 4;
@@ -190,6 +199,8 @@ ___________________________________________ */
 		grid-column: 2 / span 1;
 	}
 
+	/* ----------- Mobile Grid Items Ends ---------- */
+
 	/*------------ Mobile Header ------------*/
 	.nav-bar {
 		padding-top: 50px;
@@ -202,6 +213,8 @@ ___________________________________________ */
 	nav {
 		display: none;
 	}
+
+	/* ----------- Mobile Header Ends ------------ */
 
 	/*------------ Mobile Footer ------------*/
 
@@ -231,6 +244,8 @@ ___________________________________________ */
 		background-color: white;
 		color: black;
 	}
+
+	/* ---------- Mobile Footer Ends ----------- */
 
 	/*------------ Mobile Home ------------*/
 
@@ -292,13 +307,56 @@ ___________________________________________ */
 		padding: 2em 30vw;
 	}
 
-	.testimonial-block img {
-		width: 70vw;
+	.testimonial {
+		display: none;
 	}
 
-	/*------------ End Mobile ------------*/
+	/* ------------ Mobile Home Ends ------------ */
 
-	/*------------ Mobile Contact -----------*/
+	/* ------------ Mobile Team ------------ */
+
+	.team-heading p {
+		font-size: 2em;
+	}
+
+	.team-card img {
+		width: 100%;
+	}
+
+	.team-card h3 {
+		font-size: 2em;
+		font-weight: 600;
+		margin-top: 0.5em;
+	}
+
+	.team-card p {
+		font-size: 1.1em;
+		margin-bottom: 2em;
+		margin-top: 0.5em;
+	}
+
+	.mobile-hide {
+		display: none;
+	}
+
+	/* ----------- Mobile Team End ------------ */
+
+	/* ---------- Mobile Case -------------- */
+
+	.case-photos {
+		width: 100%;
+		height: 30em;
+		object-fit: cover;
+		margin-top: 6em;
+	}
+
+	.case-block p {
+		margin-top: 1em;
+	}
+
+	/* ------------ Mobile Case Ends ----------- */
+
+	/* ------------ Mobile Contact ----------- */
 	.f-right {
 		display: none;
 	}
@@ -370,7 +428,7 @@ ___________________________________________ */
 
 	/* ------------ Mobile Contact End ---------- */
 
-	/* ------------ Mobile Portfolio Start ---------- */
+	/* ------------ Mobile Portfolio ---------- */
 
 	.our-work-and-description {
 		grid-column: 1 / span 3;
@@ -440,6 +498,8 @@ ___________________________________________ */
 		margin-bottom: 0.5em;
 	}
 
+	/* ----------- Mobile Portfolio Ends ------------ */
+
 	/*------------ Start Tablet ------------*/
 
 	@media screen and (min-width: 800px) {
@@ -508,10 +568,25 @@ ___________________________________________ */
 		.services-block img {
 			padding: 1em 3em;
 		}
+
+		.testimonial {
+			display: none;
+		}
+
 		.services-grid {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 		}
+
+		/* --------- Tablet Home Ends ---------- */
+
+		/* --------- Tablet Team ---------- */
+
+		.team-pics {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		/* --------- Tablet Team Ends ---------- */
 
 		/* --------- Tablet Contact --------------*/
 
@@ -553,11 +628,13 @@ ___________________________________________ */
 			margin-top: 2em;
 		}
 
+		/* ------------ Tablet Contact Ends ------------- */
+
 		/* --------- Tablet Portfolio ----------- */
 
 		.our-work-and-description {
 			grid-column: 1 / span 4;
-			margin-left: 5em;
+			margin-left: 3.5em;
 		}
 
 		.our-work {
@@ -572,7 +649,7 @@ ___________________________________________ */
 		.piece-2 {
 			grid-column: 2 / span 1;
 			display: grid;
-			margin-left: 3em;
+			margin-left: 5em;
 			margin-top: 18em;
 			margin-bottom: 9em;
 		}
@@ -584,15 +661,22 @@ ___________________________________________ */
 		}
 
 		.description-headline {
-			margin-left: 13.5em;
+			margin-left: 12.7em;
 			position: relative;
-			top: -4.5em;
+			top: -5.3em;
 			width: 21.2em;
 		}
+
+		.description,
+		.description-2,
+		.description-3 {
+			width: 18em;
+		}
+		/* ---------- Tablet Portfolio Ends ----------- */
 	}
 
 	@media screen and (min-width: 1000px) {
-		/*------------ Desktop Home ------------*/
+		/* ------------ Desktop Home Grid Ends ------------ */
 
 		.head,
 		.main > *,
@@ -600,6 +684,8 @@ ___________________________________________ */
 			display: grid;
 			grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
 		}
+
+		/* --------- Desktop Home Grid Ends ---------- */
 
 		/*------------ Desktop Nav ------------*/
 
@@ -629,6 +715,8 @@ ___________________________________________ */
 			background-color: #04d89d;
 		}
 
+		/* --------- Desktop Nav Ends ---------- */
+
 		/*------------ Mobile Footer ------------*/
 
 		.footer-cta {
@@ -651,9 +739,9 @@ ___________________________________________ */
 			font-size: 1.2em;
 		}
 
-		.address-and-headline h3 {
-			font-size: 1.5em;
-		}
+		/* -------- Mobile Footer Ends --------- */
+
+		/* -------- Desktop Home -------- */
 
 		.address-and-headline h3 {
 			font-size: 1.5em;
@@ -693,6 +781,112 @@ ___________________________________________ */
 	.services-block img {
 		padding: 2em 5em 1em;
 	}
+
+	.testimonial {
+		display: grid;
+	}
+
+	.test-slider {
+		display: grid;
+		grid-template-columns: 1fr 6fr 1fr;
+	}
+
+	.arrow {
+		height: 2em;
+		margin: auto auto;
+		stroke-width: 2em;
+	}
+
+	.slider-block {
+		display: inline;
+	}
+
+	.slider-block img {
+		width: 15em;
+		height: 15em;
+		border-radius: 20em;
+		object-fit: cover;
+	}
+
+	.slider-block p {
+		float: right;
+		width: 25em;
+		text-align: center;
+		margin-top: 5em;
+		margin-left: 3em;
+	}
+
+	/* -------- Desktop Home Ends --------- */
+
+	/* --------- Desktop Team ---------- */
+
+	.team-pics {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.team-card {
+		filter: grayscale(1);
+		opacity: 0.8;
+	}
+
+	.team-card:hover {
+		filter: none;
+		opacity: 1;
+		transition: all 0.8s ease;
+	}
+
+	.team-card img {
+		height: 30em;
+		object-fit: cover;
+	}
+
+	.team-card p,
+	.team-card h3,
+	.team-card h4 {
+		display: none;
+	}
+
+	.detail-text span {
+		font-size: 2em;
+	}
+
+	.detail-text p {
+		grid-column: 2 / span 2;
+		font-size: 1.5em;
+	}
+
+	.mobile-hide {
+		display: grid;
+		grid-column: 2 / span 2;
+		grid-template-columns: 1fr;
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	/* --------- Desktop Team Ends --------- */
+
+	/* -------- Desktop Case -------- */
+
+	.case-photos {
+		width: 100%;
+		height: 30em;
+		object-fit: cover;
+		margin-top: 6em;
+	}
+
+	.case-block {
+		max-width: 40em;
+		margin: 0 auto;
+	}
+
+	.case-block p {
+		max-width: 35em;
+		margin: 1.2em auto 0;
+	}
+
+	/* -------- Desktop Case Ends --------- */
 
 	/* ------------ Portfolio page starts ------------*/
 
