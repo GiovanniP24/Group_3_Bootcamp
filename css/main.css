@@ -41,42 +41,37 @@ Accessibility
 }
 
 /* -------------
-Fonts
+  Fonts
 -------------- */
+
 
 /* ------------ */
 
 /* -------------
-Plugins
+  Plugins
 -------------*/
 
 /* -------------
-Reset
+  Reset
 -------------*/
 
 body {
 	margin: 0;
 	padding: 0;
 	font-size: 16px;
-	font-family: "Quicksand", sans-serif;
+	font-family: 'Quicksand', sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-p {
+h1, h2, h3, h4, p {
 	margin: 0;
 	padding: 0;
 }
 
 a {
 	text-decoration: none;
-	color: #000;
 }
 
-input,
-textarea {
+input, textarea {
 	display: block;
 	margin: 0;
 	padding: 0;
@@ -84,58 +79,64 @@ textarea {
 
 /* ___________________________________________
 
-	CSS Guide
+       CSS Guide
 ___________________________________________ */
 
 /* 01. General Styles                        
-02. CSS Grid                          
+   02. CSS Grid                          
 /* _____________________________________
 
-01. General Styles
+   01. General Styles
    _____________________________________ */
 
-.hidden {
-	display: none;
-}
+   .hidden {
+       display: none;
+   }
 
-.box-model {
-	margin: 1rem;
-	padding: 1rem;
-	background: #000;
-}
+   .box-model {
+	   margin: 1rem;
+	   padding: 1rem;
+	   background: #000;
+   }
 
-/*------- Floats --------*/
+   /*------- Floats --------*/
 
-.f-left {
-	float: left;
-}
+   .f-left {
+	   float: left;
+   }
 
-.f-right {
-	float: right;
-}
+   .f-right {
+	   float: right;
+   }
 
-/*------- End Floats --------*/
+   /*------- End Floats --------*/
 
-/*------- Start Margin --------*/
-.margin-top-sm {
+   /*------- Start Margin --------*/
+   .margin-top-sm {
 	margin-top: 50px;
-}
+   }
 
-.margin-top-md {
+   .margin-top-md {
 	margin-top: 100px;
-}
+   }
 
-/*------- End Margin --------*/
+   /*------- End Margin --------*/
 
-/*------- Mobile Padding ---------*/
 
-.mobile-padding {
-	padding: 0 1em;
-}
 
-/*------- End Mobile Padding ---------*/
 
-@supports (grid-area: auto) {
+
+
+   /*------- Mobile Padding ---------*/
+
+   .mobile-padding {
+	   padding: 0 1em;
+   }
+
+   /*------- End Mobile Padding ---------*/
+
+   @supports (grid-area: auto) {
+
 	/*------------ Start Mobile ------------*/
 
 	.site {
@@ -145,9 +146,7 @@ ___________________________________________ */
 
 	/*------------ Mobile Grid Items ------------*/
 
-	.head,
-	.main > *,
-	.foot {
+	.head, .main > *, .foot {
 		display: grid;
 		grid-template-columns: 40px 1fr 1fr 40px;
 	}
@@ -160,8 +159,8 @@ ___________________________________________ */
 
 	.two-items {
 		display: grid;
-		grid-column: 2 / span 2;
-		grid-template-columns: repeat(2, 1fr);
+		grid-column: 2/ span 2;
+		grid-template-columns: 1fr;
 		justify-content: space-evenly;
 		row-gap: 2em;
 		column-gap: 2em;
@@ -199,22 +198,30 @@ ___________________________________________ */
 		grid-column: 2 / span 1;
 	}
 
-	/* ----------- Mobile Grid Items Ends ---------- */
-
 	/*------------ Mobile Header ------------*/
 	.nav-bar {
 		padding-top: 50px;
 	}
 
-	.nav-bar img {
+	.nav-bar img{
 		width: 150px;
-	}
 
+	}
+	
 	nav {
-		display: none;
+		display: grid;
+		margin-top: 2em;
 	}
 
-	/* ----------- Mobile Header Ends ------------ */
+	nav ul li {
+		display: inline;
+		margin-left: 1.5em;
+		font-size: 1em;
+	}
+
+	nav ul li a{
+		color: #000;
+	}
 
 	/*------------ Mobile Footer ------------*/
 
@@ -231,7 +238,7 @@ ___________________________________________ */
 	.footer-cta h3 {
 		font-size: 2em;
 	}
-
+	
 	.button-dark {
 		color: white;
 		border: 1px solid white;
@@ -243,28 +250,34 @@ ___________________________________________ */
 	.button-dark:hover {
 		background-color: white;
 		color: black;
+		transition: all 0.6s ease;
 	}
 
-	/* ---------- Mobile Footer Ends ----------- */
 
 	/*------------ Mobile Home ------------*/
 
-	.address-and-headline p {
+	.address-and-headline p{
 		font-size: 2em;
 		width: 70vw;
 		font-weight: 600;
 		margin-top: 1em;
 	}
 
+	.address-and-headline span {
+		margin-top: 2em;
+		font-weight: 500;
+	}
+
 	.brand-video {
 		background: #000;
 		grid-column: 1 / span 4;
+
 	}
 
 	.brand-video video {
 		width: 100%;
 	}
-
+	
 	.team-description {
 		padding: 3em;
 		text-align: center;
@@ -284,17 +297,23 @@ ___________________________________________ */
 		z-index: +1;
 	}
 
+	
+
 	.our-services-text h3 {
 		font-size: 2em;
 	}
 
 	.services-block {
 		grid-template-columns: 1fr;
-		font-size: 2em;
+		font-size: 2em;	
 	}
 
-	.block-hover:hover {
+	.block-hover:hover{
 		background-color: #04d89c1c;
+		transition: all 0.6s ease;
+		transform: scale(1.1);
+		border-radius: 1em;
+
 	}
 
 	.services-block h4 {
@@ -307,13 +326,17 @@ ___________________________________________ */
 		padding: 2em 30vw;
 	}
 
+
 	.testimonial {
 		display: none;
 	}
 
-	/* ------------ Mobile Home Ends ------------ */
+	.mobile-hide-lightbox {
+		display: none;
+	}
 
-	/* ------------ Mobile Team ------------ */
+
+	/*------------ Mobile Team ------------*/
 
 	.team-heading p {
 		font-size: 2em;
@@ -323,7 +346,7 @@ ___________________________________________ */
 		width: 100%;
 	}
 
-	.team-card h3 {
+	.team-card h3{
 		font-size: 2em;
 		font-weight: 600;
 		margin-top: 0.5em;
@@ -333,15 +356,15 @@ ___________________________________________ */
 		font-size: 1.1em;
 		margin-bottom: 2em;
 		margin-top: 0.5em;
+
 	}
 
 	.mobile-hide {
 		display: none;
 	}
 
-	/* ----------- Mobile Team End ------------ */
 
-	/* ---------- Mobile Case -------------- */
+	/*------------ Mobile Case ------------*/
 
 	.case-photos {
 		width: 100%;
@@ -354,168 +377,82 @@ ___________________________________________ */
 		margin-top: 1em;
 	}
 
-	/* ------------ Mobile Case Ends ----------- */
+	/*------------ Mobile Porfolio ------------*/
 
-	/* ------------ Mobile Contact ----------- */
-
-	div.contact-us {
-		display: grid;
-		grid-column: 1 / span 2;
-		justify-content: center;
-		margin-left: -3em;
-	}
-
-	h2.contact-us {
-		margin-top: 4em;
-		font-size: 1.3em;
-	}
-
-	.contact-us-headline {
-		margin-top: 0.5em;
-		width: 9em;
+	.project-block h3 {
 		font-size: 2em;
-	}
-
-	.contact-form {
-		display: grid;
-		grid-column: 1 / span 2;
-		margin-top: 5em;
-		margin-left: 2.7em;
-	}
-
-	.main-form-text {
 		margin-bottom: 1em;
-		font-size: 2em;
-		margin-top: 0.5em;
+		font-weight: 600;
 	}
 
-	label {
-		font-size: 1.2em;
-	}
-
-	#name,
-	#email,
-	#message {
-		margin-top: 0.5em;
+	.project-block p {
 		margin-bottom: 1em;
-		width: 25.5em;
-		height: 4em;
 	}
 
-	#message {
-		height: 8em;
+	.project-block a {
+		color: #04d89d;
 	}
 
-	#button {
-		margin-left: 8.5em;
-		margin-top: 1em;
+	.project-block img{
+		width: 100%;
+		height: 30em;
+		object-fit: cover;
 	}
 
-	.contact-us-footer {
-		display: grid;
-		grid-column: 1 / span 2;
-		justify-content: center;
-		margin-left: -4em;
+	/*------------ Mobile Contact ------------*/
+
+	.contact-bg {
+		padding: 3em 0;
+		background-color: #04d89c1c;
 	}
 
-	.have-a-project-in-mind {
+	.contact-form label{
 		font-size: 1.3em;
 	}
 
-	button {
-		margin-bottom: 7em;
-		margin-top: 1em;
-		margin-left: 8.4em;
-		width: 8em;
-		height: 3em;
-	}
-
-	/* ------------ Mobile Contact End ---------- */
-
-	/* ------------ Mobile Portfolio ---------- */
-
-	.our-work-and-description {
-		grid-column: 1 / span 3;
-		font-size: 1.3em;
-		margin-left: 1.8em;
-		margin-top: 4em;
-		margin-bottom: 6em;
-		width: 15em;
-	}
-
-	.our-work {
-		margin-bottom: 1.5em;
-	}
-
-	.description {
-		width: 15em;
-	}
-
-	#portfolio-peices {
-		display: grid;
-		grid-column: 1 / span 3;
-	}
-
-	.piece-1,
-	.piece-2,
-	.piece-3 {
-		margin-left: 1.4em;
-		margin-bottom: 4em;
-	}
-
-	.project-1,
-	.project-2,
-	.project-3 {
-		margin-bottom: 1em;
-		font-size: 1.5em;
-	}
-
-	.description,
-	.description-2,
-	.description-3 {
-		margin-bottom: 1em;
-		font-size: 1em;
-		width: 24em;
-	}
-
-	.have-a-project-in-mind {
-		margin-top: 4.5em;
-		margin-left: 3em;
-	}
-
-	button {
-		margin-left: 9em;
-		margin-top: 4em;
-	}
-
-	.address-info {
-		width: 9em;
+	.contact-form h3 {
 		margin-bottom: 2em;
-		margin-left: 2em;
+		font-size: 2em;
 	}
 
-	.number-and-email {
-		margin-left: 2em;
+	.contact-form input {
+		margin: 1em 0;
+		width: 100%;
+		height: 3em;
+		border: none;
 	}
 
-	.number {
-		margin-bottom: 0.5em;
+	#message {
+		height: 10em;
 	}
 
-	/* ----------- Mobile Portfolio Ends ------------ */
+	.contact-form button {
+		color: white;
+		background-color: #04d89d;
+		border: none;
+		margin: 1em 20em;
+		padding: 0.8em 2em;
+		
+	}
 
+
+
+
+	.hidden {
+		display: none;
+	}
+	/*------------ End Mobile ------------*/
 	/*------------ Start Tablet ------------*/
 
-	@media screen and (min-width: 800px) {
+   @media screen and (min-width: 800px) {
+
 		.site {
 			max-width: 999px;
 		}
 
 		/*------------ Grid Items ------------*/
 
-		.head,
-		.main > *,
-		.foot {
+		.head, .main > *, .foot {
 			display: grid;
 			grid-template-columns: 1fr repeat(2, minmax(auto, 20em)) 1fr;
 		}
@@ -560,140 +497,90 @@ ___________________________________________ */
 		}
 
 		/*------------ Tablet Home ------------*/
-
+		
 		.team-description p {
 			font-size: 1.5em;
 		}
 
 		.services-block h4 {
-			padding: 1em 1em;
+			padding: 1em 1em ;
 		}
-
+	
 		.services-block img {
-			padding: 1em 3em;
+			padding: 1em 3em ;
 		}
 
 		.testimonial {
 			display: none;
 		}
 
-		.services-grid {
-			display: grid;
+		.mobile-hide-lightbox {
+			display: none;
+		}
+
+		/*------------ Tablet Team ------------*/
+
+		.team-pics{
 			grid-template-columns: 1fr 1fr;
 		}
 
-		/* --------- Tablet Home Ends ---------- */
-
-		/* --------- Tablet Team ---------- */
-
-		.team-pics {
-			grid-template-columns: 1fr 1fr;
+		.hidden {
+			display: none;
 		}
 
-		/* --------- Tablet Team Ends ---------- */
 
-		/* --------- Tablet Contact --------------*/
+		/*------------ Tablet Porfolio ------------*/
 
-		div.contact-us {
-			display: grid;
-			grid-column: 1 / span 2;
-			justify-content: start;
-			margin-left: 5em;
+		.project-block div {
+			margin-top: 3em;
+		}
+		.project-block img{
+			width: 100%;
+			height: 20em;
+			object-fit: cover;
 		}
 
-		.contact-form {
-			margin-left: 5em;
+		.project-block p {
+			width: 80%;
 		}
 
-		.contact-us-headline {
-			width: 21em;
+		#reverse-order img{
+			grid-column: 1 / span 1;
+			grid-row: 1 / span 1;
 		}
 
-		#name,
-		#email,
-		#message {
-			width: 40em;
-		}
-
-		#message {
-			height: 10em;
-		}
-
-		.have-a-project-in-mind {
-			margin-left: 4.6em;
-		}
-
-		#button {
-			margin-left: 0;
-		}
-
-		button {
-			margin-left: 19.2em;
-			margin-top: 2em;
-		}
-
-		/* ------------ Tablet Contact Ends ------------- */
-
-		/* --------- Tablet Portfolio ----------- */
-
-		.our-work-and-description {
-			grid-column: 1 / span 4;
-			margin-left: 3.5em;
-		}
-
-		.our-work {
-			font-size: 2em;
-		}
-
-		#portfolio-peices {
-			grid-column: 1 / span 4;
-			margin-left: 2.5em;
-		}
-
-		.piece-2 {
+		#reverse-order div{
 			grid-column: 2 / span 1;
-			display: grid;
-			margin-left: 5em;
-			margin-top: 18em;
-			margin-bottom: 9em;
+			padding-left: 5em;
 		}
 
-		.piece-3 {
-			display: grid;
-			grid-column: 1 / span 2;
-			width: 18em;
+		/*------------ Tablet Contact ------------*/
+
+		.contact-form button {
+			margin-left: 0;
+			font-size: 1.2em;
+			padding: 0.7em 3em;
 		}
 
-		.description-headline {
-			margin-left: 12.7em;
-			position: relative;
-			top: -5.3em;
-			width: 21.2em;
+		.contact-form input {
+			width: 90%;
 		}
 
-		.description,
-		.description-2,
-		.description-3 {
-			width: 18em;
-		}
 
-		button {
-			margin-left: 11.6em;
-		}
-		/* ---------- Tablet Portfolio Ends ----------- */
+
 	}
 
-	@media screen and (min-width: 1000px) {
-		/* ------------ Desktop Home Grid Ends ------------ */
+	/*------------ End Tablet------------*/
 
-		.head,
-		.main > *,
-		.foot {
+	/*------------ Start Desktop ------------*/
+
+
+	@media screen and (min-width: 1000px) {
+	
+		.head, .main > *, .foot {
 			display: grid;
 			grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
 		}
-
-		/* --------- Desktop Home Grid Ends ---------- */
 
 		/*------------ Desktop Nav ------------*/
 
@@ -708,7 +595,7 @@ ___________________________________________ */
 			font-size: 1.5em;
 		}
 
-		nav ul li a {
+		nav ul li a{
 			color: #000;
 		}
 
@@ -721,35 +608,36 @@ ___________________________________________ */
 			color: white;
 			border: none;
 			background-color: #04d89d;
+			transition: all 0.6s ease;
+
 		}
 
-		/* --------- Desktop Nav Ends ---------- */
-
-		/*------------ Mobile Footer ------------*/
+	/*------------ Desktop Footer ------------*/
 
 		.footer-cta {
-			text-align: left;
+			text-align:left;
 		}
 
 		.footer-cta h3 {
 			font-size: 3em;
 			font-weight: 600;
 		}
-
+		
 		.button-dark {
 			width: 13em;
 			padding: 1em 0;
 			margin: 2em 0 5em;
-			text-align: center;
+			text-align:center;
 		}
 
 		.address-info p {
 			font-size: 1.2em;
 		}
 
-		/* -------- Mobile Footer Ends --------- */
 
-		/* -------- Desktop Home -------- */
+
+
+		/*------------ Desktop Home ------------*/
 
 		.address-and-headline h3 {
 			font-size: 1.5em;
@@ -758,15 +646,6 @@ ___________________________________________ */
 		.address-and-headline p {
 			font-size: 2.5em;
 			width: 35vw;
-		}
-
-		.team-description {
-			margin-top: -10em;
-			padding: 18em 20em 10em 20em;
-		}
-
-		.team-description p {
-			font-size: 2em;
 		}
 
 		.team-description {
@@ -823,43 +702,75 @@ ___________________________________________ */
 			margin-left: 3em;
 		}
 
-		/* -------- Desktop Home Ends --------- */
+		.lightbox {
+			position: fixed;
+			z-index: +1;
+			top: 30%;
+			left: 25%;
+			width: 50%;
+			height: 50%;
+			background-color: #ecfffb;
+			align-items: center;
+			justify-items: center;
+			padding: 0 auto;
+			box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.332);
+			border-radius: 1em;
+			text-align: center;
+		}
 
-		/* --------- Desktop Team ---------- */
+		.lightbox div {
+			width: 70%;
+			margin: 5em auto;
+		}
 
-		.team-pics {
+		.lightbox span {
+			font-size: 3em;
+			font-weight: 700;
+		}
+
+		.lightbox p {
+			margin-top: 2em;
+			font-size: 2em;
+		}
+
+		.mobile-hide-lightbox {
+			display: block;
+		}
+
+		/*------------ Desktop Team ------------*/
+
+		.team-pics{
 			grid-template-columns: repeat(4, 1fr);
 		}
 
 		.team-card {
 			filter: grayscale(1);
-			opacity: 0.8;
+			opacity:0.8;
 		}
 
 		.team-card:hover {
 			filter: none;
-			opacity: 1;
+			opacity:1;
+			transform: scale(1.1);
 			transition: all 0.8s ease;
 		}
 
 		.team-card img {
 			height: 30em;
-			object-fit: cover;
+			object-fit:cover;
 		}
 
-		.team-card p,
-		.team-card h3,
-		.team-card h4 {
+		.team-card p, .team-card h3, .team-card h4{
 			display: none;
 		}
 
-		.detail-text span {
+		.detail-text span{
 			font-size: 2em;
 		}
 
 		.detail-text p {
 			grid-column: 2 / span 2;
-			font-size: 1.5em;
+			font-size: 1.1em;
 		}
 
 		.mobile-hide {
@@ -867,14 +778,14 @@ ___________________________________________ */
 			grid-column: 2 / span 2;
 			grid-template-columns: 1fr;
 		}
-
+		
 		.hidden {
 			display: none;
 		}
-
-		/* --------- Desktop Team Ends --------- */
-
-		/* -------- Desktop Case -------- */
+	
+	
+	
+		/*------------ Desktop Case ------------*/
 
 		.case-photos {
 			width: 100%;
@@ -893,71 +804,21 @@ ___________________________________________ */
 			margin: 1.2em auto 0;
 		}
 
-		/* -------- Desktop Case Ends --------- */
+		/*------------ Desktop Contact ------------*/
 
-		/* ------------ Portfolio page starts ------------*/
-
-		.our-work-and-description {
-			margin-left: 22em;
+		.contact-form button:hover {
+			background-color: #1cb388;
+			transform: scale(1.1);
+			transition: all 0.6s ease;
 		}
 
-		.description-headline {
-			margin-left: 15em;
-		}
+		/*------------ Desktop Porfolio ------------*/
 
-		.description-headline {
-			width: 30em;
+		.project-block p {
+			font-size: 1.3em;
 		}
-
-		#portfolio-peices {
-			margin-left: 27em;
-		}
-
-		.description,
-		.description-2,
-		.description-3 {
-			width: 23em;
-		}
-
-		.have-a-project-in-mind {
-			margin-left: 5px;
-		}
-
-		button {
-			margin-left: 5px;
-		}
-
-		/* ------ Contact page starts ------*/
-
-		div.contact-us {
-			margin-left: 29em;
-		}
-
-		.contact-us-headline {
-			width: 12em;
-		}
-
-		.contact-form {
-			margin-left: 29em;
-		}
-
-		#name,
-		#email {
-			width: 30em;
-		}
-
-		#button {
-			width: 10em;
-			height: 3.5em;
-		}
-
-		.contact-us-footer {
-			margin-left: -46.5em;
-		}
-
-		.address-info,
-		.number-and-email {
-			margin-left: 29.5em;
-		}
+	
 	}
+
+
 }

@@ -2,24 +2,22 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link href="css/reset.css" type="text/css" rel="stylesheet">
-    <link href="css/main.css" type="text/css" rel="stylesheet">
-    <title>HelpUp Studio Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/reset.css" type="text/css" rel="stylesheet" />
+    <link href="css/main.css" type="text/css" rel="stylesheet" />
+    <title>HelpUp Studio Contact Page</title>
 </head>
 
 <body>
     <header class="head" id="header">
         <h1 class="hidden">Header</h1>
         <div class="two-items nav-bar">
-            <img src="images/logoSVG.svg" alt="Logo">
+            <a href="index.html"><img src="images/logoSVG.svg" alt="Logo"></a>
             <nav class="f-right">
                 <ul>
                     <li><a href="team.html">Team</a></li>
@@ -27,47 +25,53 @@
                     <li><a class="button" href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            </section>
+        </section>
     </header>
 
-    <main>
-        <section id="main">
-            <h1 class="hidden">Main</h1>
-            <div class="contact-us">
-                <h2 class="contact-us">Contact us</h2>
-                <h3 class="contact-us-headline">We are looking forward to connect with you!</h3>
-            </div>
-            <div class="contact-form">
-                <form action="/example.html" method="POST">
-                    <h3 class="main-form-text">Send us a message</h3>
-                    <br>
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" value="name">
-                    <br>
-                    <label for="email">Email</label>
-                    <input type="text" id="email" value="email">
-                    <br>
-                    <label for="message">Message</label>
-                    <input type="text" id="message" value="message">
-                    <br>
-                    <button id="button" type="submit">Send</button>
-                </form>
+
+
+    <main class="main">
+        <h1 class="hidden">Contact Page</h1>
+        <section>
+            <h2 class="hidden">Contact Page Heading</h2>
+            <div class="address-and-headline one-item margin-top-md">
+                <h3>Contact Us</h3>
+                <p class="agency-headline">We are looking forward to connect with you!</p>
             </div>
         </section>
+
+        <section class="contact-bg margin-top-md">
+            <div class="one-item">
+                <h2 class="hidden">Contact Form</h2>
+                <form class="contact-form" action="/example.html" method="POST">
+                    <h3>Send us a message</h3>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" value="name">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" value="email">
+                    <label for="message">Message</label>
+                    <input type="text" id="message" value="message">
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+
+        </section>
+        
     </main>
     <footer>
-        <section id="footer">
-            <h1 class="hidden">Footer</h1>
-            <div class="contact-us-footer">
-                <h2 class="have-a-project-in-mind">Have a project in mind?</h2>
-                <button type="button">Contact</button>
+        <section class="foot margin-top-md">
+            <h2 class="hidden">Footer</h2>
+            <div class="one-item footer-cta margin-top-sm">
+                <h3>Have a project in mind?</h3>
+                <a class="button-dark" href="contact.html">Contact</a>
             </div>
-            <div class="address-info">
-                <h3 class="address">1st Success Ave, London, Ontario</h3>
-            </div>
-            <div class="number-and-email">
-                <h3 class="number">+1 800 500 3030</h3>
-                <h3 class="email">hello@xxx.com</h3>
+            <div class="address-info two-items">
+                <h3 class="hidden">Address and Phone of Studio</h3>
+                <div>
+                    <p>1st Success Ave, London, Ontario</p>
+                    <p class="margin-top-sm">+1 800 500 3030</p>
+                    <p>hello@xxx.com</p>
+                </div>
             </div>
         </section>
     </footer>
