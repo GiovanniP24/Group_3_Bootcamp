@@ -44,7 +44,6 @@ Accessibility
   Fonts
 -------------- */
 
-
 /* ------------ */
 
 /* -------------
@@ -59,10 +58,14 @@ body {
 	margin: 0;
 	padding: 0;
 	font-size: 16px;
-	font-family: 'Quicksand', sans-serif;
+	font-family: "Quicksand", sans-serif;
 }
 
-h1, h2, h3, h4, p {
+h1,
+h2,
+h3,
+h4,
+p {
 	margin: 0;
 	padding: 0;
 }
@@ -71,7 +74,8 @@ a {
 	text-decoration: none;
 }
 
-input, textarea {
+input,
+textarea {
 	display: block;
 	margin: 0;
 	padding: 0;
@@ -89,54 +93,48 @@ ___________________________________________ */
    01. General Styles
    _____________________________________ */
 
-   .hidden {
-       display: none;
-   }
+.hidden {
+	display: none;
+}
 
-   .box-model {
-	   margin: 1rem;
-	   padding: 1rem;
-	   background: #000;
-   }
+.box-model {
+	margin: 1rem;
+	padding: 1rem;
+	background: #000;
+}
 
-   /*------- Floats --------*/
+/*------- Floats --------*/
 
-   .f-left {
-	   float: left;
-   }
+.f-left {
+	float: left;
+}
 
-   .f-right {
-	   float: right;
-   }
+.f-right {
+	float: right;
+}
 
-   /*------- End Floats --------*/
+/*------- End Floats --------*/
 
-   /*------- Start Margin --------*/
-   .margin-top-sm {
+/*------- Start Margin --------*/
+.margin-top-sm {
 	margin-top: 50px;
-   }
+}
 
-   .margin-top-md {
+.margin-top-md {
 	margin-top: 100px;
-   }
+}
 
-   /*------- End Margin --------*/
+/*------- End Margin --------*/
 
+/*------- Mobile Padding ---------*/
 
+.mobile-padding {
+	padding: 0 1em;
+}
 
+/*------- End Mobile Padding ---------*/
 
-
-
-   /*------- Mobile Padding ---------*/
-
-   .mobile-padding {
-	   padding: 0 1em;
-   }
-
-   /*------- End Mobile Padding ---------*/
-
-   @supports (grid-area: auto) {
-
+@supports (grid-area: auto) {
 	/*------------ Start Mobile ------------*/
 
 	.site {
@@ -146,7 +144,9 @@ ___________________________________________ */
 
 	/*------------ Mobile Grid Items ------------*/
 
-	.head, .main > *, .foot {
+	.head,
+	.main > *,
+	.foot {
 		display: grid;
 		grid-template-columns: 40px 1fr 1fr 40px;
 	}
@@ -159,7 +159,7 @@ ___________________________________________ */
 
 	.two-items {
 		display: grid;
-		grid-column: 2/ span 2;
+		grid-column: 2 / span 2;
 		grid-template-columns: 1fr;
 		justify-content: space-evenly;
 		row-gap: 2em;
@@ -203,11 +203,10 @@ ___________________________________________ */
 		padding-top: 50px;
 	}
 
-	.nav-bar img{
+	.nav-bar img {
 		width: 150px;
-
 	}
-	
+
 	nav {
 		display: grid;
 		margin-top: 2em;
@@ -219,7 +218,7 @@ ___________________________________________ */
 		font-size: 1em;
 	}
 
-	nav ul li a{
+	nav ul li a {
 		color: #000;
 	}
 
@@ -238,7 +237,7 @@ ___________________________________________ */
 	.footer-cta h3 {
 		font-size: 2em;
 	}
-	
+
 	.button-dark {
 		color: white;
 		border: 1px solid white;
@@ -253,10 +252,9 @@ ___________________________________________ */
 		transition: all 0.6s ease;
 	}
 
-
 	/*------------ Mobile Home ------------*/
 
-	.address-and-headline p{
+	.address-and-headline p {
 		font-size: 2em;
 		width: 70vw;
 		font-weight: 600;
@@ -271,13 +269,12 @@ ___________________________________________ */
 	.brand-video {
 		background: #000;
 		grid-column: 1 / span 4;
-
 	}
 
 	.brand-video video {
 		width: 100%;
 	}
-	
+
 	.team-description {
 		padding: 3em;
 		text-align: center;
@@ -297,23 +294,20 @@ ___________________________________________ */
 		z-index: +1;
 	}
 
-	
-
 	.our-services-text h3 {
 		font-size: 2em;
 	}
 
 	.services-block {
 		grid-template-columns: 1fr;
-		font-size: 2em;	
+		font-size: 2em;
 	}
 
-	.block-hover:hover{
+	.block-hover:hover {
 		background-color: #04d89c1c;
 		transition: all 0.6s ease;
 		transform: scale(1.1);
 		border-radius: 1em;
-
 	}
 
 	.services-block h4 {
@@ -326,7 +320,6 @@ ___________________________________________ */
 		padding: 2em 30vw;
 	}
 
-
 	.testimonial {
 		display: none;
 	}
@@ -334,7 +327,6 @@ ___________________________________________ */
 	.mobile-hide-lightbox {
 		display: none;
 	}
-
 
 	/*------------ Mobile Team ------------*/
 
@@ -346,7 +338,7 @@ ___________________________________________ */
 		width: 100%;
 	}
 
-	.team-card h3{
+	.team-card h3 {
 		font-size: 2em;
 		font-weight: 600;
 		margin-top: 0.5em;
@@ -356,13 +348,11 @@ ___________________________________________ */
 		font-size: 1.1em;
 		margin-bottom: 2em;
 		margin-top: 0.5em;
-
 	}
 
 	.mobile-hide {
 		display: none;
 	}
-
 
 	/*------------ Mobile Case ------------*/
 
@@ -393,7 +383,7 @@ ___________________________________________ */
 		color: #04d89d;
 	}
 
-	.project-block img{
+	.project-block img {
 		width: 100%;
 		height: 30em;
 		object-fit: cover;
@@ -406,7 +396,7 @@ ___________________________________________ */
 		background-color: #04d89c1c;
 	}
 
-	.contact-form label{
+	.contact-form label {
 		font-size: 1.3em;
 	}
 
@@ -432,11 +422,7 @@ ___________________________________________ */
 		border: none;
 		margin: 1em 20em;
 		padding: 0.8em 2em;
-		
 	}
-
-
-
 
 	.hidden {
 		display: none;
@@ -444,15 +430,16 @@ ___________________________________________ */
 	/*------------ End Mobile ------------*/
 	/*------------ Start Tablet ------------*/
 
-   @media screen and (min-width: 800px) {
-
+	@media screen and (min-width: 800px) {
 		.site {
 			max-width: 999px;
 		}
 
 		/*------------ Grid Items ------------*/
 
-		.head, .main > *, .foot {
+		.head,
+		.main > *,
+		.foot {
 			display: grid;
 			grid-template-columns: 1fr repeat(2, minmax(auto, 20em)) 1fr;
 		}
@@ -497,17 +484,17 @@ ___________________________________________ */
 		}
 
 		/*------------ Tablet Home ------------*/
-		
+
 		.team-description p {
 			font-size: 1.5em;
 		}
 
 		.services-block h4 {
-			padding: 1em 1em ;
+			padding: 1em 1em;
 		}
-	
+
 		.services-block img {
-			padding: 1em 3em ;
+			padding: 1em 3em;
 		}
 
 		.testimonial {
@@ -520,7 +507,7 @@ ___________________________________________ */
 
 		/*------------ Tablet Team ------------*/
 
-		.team-pics{
+		.team-pics {
 			grid-template-columns: 1fr 1fr;
 		}
 
@@ -528,13 +515,12 @@ ___________________________________________ */
 			display: none;
 		}
 
-
 		/*------------ Tablet Porfolio ------------*/
 
 		.project-block div {
 			margin-top: 3em;
 		}
-		.project-block img{
+		.project-block img {
 			width: 100%;
 			height: 20em;
 			object-fit: cover;
@@ -544,12 +530,12 @@ ___________________________________________ */
 			width: 80%;
 		}
 
-		#reverse-order img{
+		#reverse-order img {
 			grid-column: 1 / span 1;
 			grid-row: 1 / span 1;
 		}
 
-		#reverse-order div{
+		#reverse-order div {
 			grid-column: 2 / span 1;
 			padding-left: 5em;
 		}
@@ -565,19 +551,16 @@ ___________________________________________ */
 		.contact-form input {
 			width: 90%;
 		}
-
-
-
 	}
 
 	/*------------ End Tablet------------*/
 
 	/*------------ Start Desktop ------------*/
 
-
 	@media screen and (min-width: 1000px) {
-	
-		.head, .main > *, .foot {
+		.head,
+		.main > *,
+		.foot {
 			display: grid;
 			grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
 		}
@@ -595,7 +578,7 @@ ___________________________________________ */
 			font-size: 1.5em;
 		}
 
-		nav ul li a{
+		nav ul li a {
 			color: #000;
 		}
 
@@ -609,33 +592,29 @@ ___________________________________________ */
 			border: none;
 			background-color: #04d89d;
 			transition: all 0.6s ease;
-
 		}
 
-	/*------------ Desktop Footer ------------*/
+		/*------------ Desktop Footer ------------*/
 
 		.footer-cta {
-			text-align:left;
+			text-align: left;
 		}
 
 		.footer-cta h3 {
 			font-size: 3em;
 			font-weight: 600;
 		}
-		
+
 		.button-dark {
 			width: 13em;
 			padding: 1em 0;
 			margin: 2em 0 5em;
-			text-align:center;
+			text-align: center;
 		}
 
 		.address-info p {
 			font-size: 1.2em;
 		}
-
-
-
 
 		/*------------ Desktop Home ------------*/
 
@@ -712,7 +691,7 @@ ___________________________________________ */
 			background-color: #ecfffb;
 			align-items: center;
 			justify-items: center;
-			padding: 0 auto;
+			padding: 0px;
 			box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.332);
 			border-radius: 1em;
 			text-align: center;
@@ -739,32 +718,34 @@ ___________________________________________ */
 
 		/*------------ Desktop Team ------------*/
 
-		.team-pics{
+		.team-pics {
 			grid-template-columns: repeat(4, 1fr);
 		}
 
 		.team-card {
 			filter: grayscale(1);
-			opacity:0.8;
+			opacity: 0.8;
 		}
 
 		.team-card:hover {
 			filter: none;
-			opacity:1;
+			opacity: 1;
 			transform: scale(1.1);
 			transition: all 0.8s ease;
 		}
 
 		.team-card img {
 			height: 30em;
-			object-fit:cover;
+			object-fit: cover;
 		}
 
-		.team-card p, .team-card h3, .team-card h4{
+		.team-card p,
+		.team-card h3,
+		.team-card h4 {
 			display: none;
 		}
 
-		.detail-text span{
+		.detail-text span {
 			font-size: 2em;
 		}
 
@@ -778,13 +759,11 @@ ___________________________________________ */
 			grid-column: 2 / span 2;
 			grid-template-columns: 1fr;
 		}
-		
+
 		.hidden {
 			display: none;
 		}
-	
-	
-	
+
 		/*------------ Desktop Case ------------*/
 
 		.case-photos {
@@ -817,8 +796,5 @@ ___________________________________________ */
 		.project-block p {
 			font-size: 1.3em;
 		}
-	
 	}
-
-
 }
