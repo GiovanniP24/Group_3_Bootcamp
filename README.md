@@ -1,4 +1,4 @@
-# STARTUP AGENCY - Bootcamp Project
+# HelpUp Studios - Bootcamp Project
 
 A group of four students will be designing a professional agency site with an original logo and tagline.
 
@@ -12,6 +12,7 @@ Open the web app in the browser and enjoy.
 
 ## Credits
 
+- Giovanni Perruzzi
 - Zeyin Lu
 - Tonya Oliver
 - Gonzalo Martin Arango
