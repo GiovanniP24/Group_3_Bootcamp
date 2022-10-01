@@ -1,10 +1,10 @@
 # HelpUp Studios - Bootcamp Project
 
-A group of four students will be designing a professional agency site with an original logo and tagline.
+We will be designing a professional agency site with an original logo and tagline. We will also design and animate a video to promote the new startup advertising agency site.
 
 ## Installing and running app
 
-Clone the web app by <cd> into any directory, and run the app. You can also download the app by going to the repo, clicking the green button that says Code, and clicking on download ZIP.
+Run the web app after cloning it into any directory with <code>cd</code>. You can also download the app by going to the repo, clicking the green button that says "Code," and clicking on "Download ZIP."
 
 ## How to use Project
 
